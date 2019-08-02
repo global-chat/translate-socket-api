@@ -23,9 +23,9 @@ var jose = require('node-jose');
 var AWS = require("aws-sdk");
 AWS.config.update({ region: process.env.AWS_REGION });
 var DDB = new AWS.DynamoDB({ apiVersion: "2012-10-08" });
-var region = 'us-west-2';
-var userpool_id = 'us-west-2_mp3lBd4gS';
-var app_client_id = '61qj7spjljcro96io2eknc0jat';
+var region = 'REGION';
+var userpool_id = 'User Pool ID';
+var app_client_id = 'Client ID';
 var keys_url = 'https://cognito-idp.' + region + '.amazonaws.com/' + userpool_id + '/.well-known/jwks.json';
 
 exports.handler = (event, context, callback) => {
